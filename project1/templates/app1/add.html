@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+
+    <title>BOOKS</title>
+{% endblock %}
+
+{% block content %}
+<h1><center>ADD BOOKS INFO</center></h1>
+<div class="container jumbotron">
+    <form method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="submit" value="ADD BOOKS" class="btn btn-success btn-lg">
+        <input type="reset" value="RESET" class="btn btn-warning btn-lg float-right">
+
+    </form>
+
+</div>
+{% endblock %}
